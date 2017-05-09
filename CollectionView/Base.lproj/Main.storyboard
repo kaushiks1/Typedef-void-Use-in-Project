@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tdf-C7-bCK">
+                                <rect key="frame" x="-4" y="66" width="383" height="601"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kx5-TJ-sdZ">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ove-UV-ICi" customClass="CollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-we-rC5">
+                                                    <rect key="frame" x="8" y="8" width="134" height="134"/>
+                                                    <color key="backgroundColor" red="0.17174156609999999" green="0.54760090589999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0HQ-SJ-1fJ">
+                                                    <rect key="frame" x="119" y="11" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="Y4n-ER-omr"/>
+                                                        <constraint firstAttribute="height" constant="20" id="xfw-U8-wLM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <state key="normal" title="X">
+                                                        <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btnClosePressed:" destination="ove-UV-ICi" eventType="touchUpInside" id="WIR-AI-eYU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="UaG-we-rC5" secondAttribute="trailing" id="EHF-ii-7uk"/>
+                                            <constraint firstItem="UaG-we-rC5" firstAttribute="top" secondItem="ove-UV-ICi" secondAttribute="topMargin" id="QFk-ql-sg1"/>
+                                            <constraint firstItem="0HQ-SJ-1fJ" firstAttribute="top" secondItem="ove-UV-ICi" secondAttribute="topMargin" constant="3" id="bEe-Np-wR3"/>
+                                            <constraint firstItem="UaG-we-rC5" firstAttribute="leading" secondItem="ove-UV-ICi" secondAttribute="leadingMargin" id="bPy-PP-z00"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="UaG-we-rC5" secondAttribute="bottom" id="g37-JV-bKg"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="0HQ-SJ-1fJ" secondAttribute="trailing" constant="3" id="qvU-YW-Jbn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="btnClose" destination="0HQ-SJ-1fJ" id="OtV-xD-yaB"/>
+                                            <outlet property="imgVw" destination="UaG-we-rC5" id="2th-Up-oRZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6At-3g-ESS">
+                                <rect key="frame" x="137" y="20" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.40794182779999999" green="0.86820913460000004" blue="0.85782563509999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="25x-Rr-uKE"/>
+                                </constraints>
+                                <state key="normal" title="Load Images"/>
+                                <connections>
+                                    <action selector="btnLoadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thX-1p-Bww"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tdf-C7-bCK" secondAttribute="bottom" id="44n-dt-pwl"/>
+                            <constraint firstItem="6At-3g-ESS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="64I-uB-1QV"/>
+                            <constraint firstItem="tdf-C7-bCK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="R6k-9w-NGv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tdf-C7-bCK" secondAttribute="trailing" constant="-20" id="baX-OT-kAF"/>
+                            <constraint firstItem="6At-3g-ESS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fdT-cQ-nvF"/>
+                            <constraint firstItem="tdf-C7-bCK" firstAttribute="top" secondItem="6At-3g-ESS" secondAttribute="bottom" constant="16" id="ysT-9K-QF4"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="btnLoadImages" destination="6At-3g-ESS" id="r4d-pa-Da2"/>
+                        <outlet property="clctnVw" destination="tdf-C7-bCK" id="0Ff-wS-vQE"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="3t4-s8-I5P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1019.5" y="-85.5"/>
+        </scene>
+    </scenes>
+</document>
